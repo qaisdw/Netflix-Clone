@@ -1,5 +1,4 @@
 import MovieFun from "./Movie"
-import { Link } from "react-router-dom";
 
 export default function MovieListFun(props){
     return (
@@ -7,9 +6,8 @@ export default function MovieListFun(props){
         {
             props.moviesData.map((data=>{
                 return(
-                    <Link>
-                        <MovieFun movie={data}/>
-                    </Link>
+                    
+                    <MovieFun movie={data}/>
                 )
             }))
         }

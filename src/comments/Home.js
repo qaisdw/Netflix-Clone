@@ -9,7 +9,7 @@ export default function HomeFun(){
         const response = await fetch(`${url}/trending`);
         const jsonData = await response.json();
         setMovies(jsonData);
-        //console.log(movies);
+        // console.log(movies);
       }
 
     // Similar to componentDidMount and componentDidUpdate:
@@ -18,7 +18,7 @@ export default function HomeFun(){
 
     return (
         <>
-        <MovieListFun moviesData={movies}/>
+        {/* <MovieListFun moviesData={movies}/> */}
         </>
         )
 }

@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
+    "react-dotenv": "^0.1.3",
     "react-hook-use-state": "^1.1.0",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
