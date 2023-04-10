@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useState} from 'react';
 
-import c from "./ModalMovie"
+import ModalMovieFun from "./ModalMovie"
 
 export default function MovieFun(props){
     const [show, setShow] = useState(false);
@@ -18,7 +18,7 @@ export default function MovieFun(props){
                 <Button variant="primary" onClick={handleShow}>More Info</Button>
             </Card.Body>
         </Card>
-        <handleShow show={show} handleClose={handleClose} data={props.movie}/>
+        <ModalMovieFun show={show} handleClose={handleClose} data={props.movie}/>
         </>
         
     )
