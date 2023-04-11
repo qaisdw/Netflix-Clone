@@ -1,19 +1,24 @@
 import {useState,useEffect} from 'react';
-import MovieListFun from "./ModalMovie";
+import MovieListFun from "./MovieList";
 
 export default function HomeFun(){
     const [movies, setMovies] = useState([]);
 
     async function gitMovieData() {
-        const url = process.env.REACT_APP_SERVER_URL;
-        const response = await fetch(`${url}/trending`);
-        const jsonData = await response.json();
-        setMovies(jsonData);
-        console.log(movies);
+      try {
+          const url = process.env.REACT_APP_SERVER_URL;
+          console.log(movies);
+          const response = await fetch(`${url}/trending`);
+          const jsonData = await response.json();
+          setMovies(jsonData);
+          console.log(movies);
+      } catch (error) {
+          console.error(error);
       }
+  }
 
     // Similar to componentDidMount and componentDidUpdate:
-      useEffect(() => { gitMovieData()});
+    useEffect(() => {gitMovieData();}, []);
       
 
     return (

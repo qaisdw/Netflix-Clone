@@ -7,7 +7,7 @@ export default function ModalMovieFun(props) {
         <Modal.Header closeButton>
           <Modal.Title>{props.data.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{(props.movie.overview).substring(0,200)}</Modal.Body>
+        <Modal.Body>{(props.data.overview)}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={props.handleClose}>
             Close
