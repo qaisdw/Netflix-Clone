@@ -1,0 +1,17 @@
+.nav{
+    background-color: #454545;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav h1{
+    color: #FFE6C7;
+}
+
+.nav a{
+   color: #FF6000;
+}
+
+.nav a:hover{
+    color: #FFA559;
+}
