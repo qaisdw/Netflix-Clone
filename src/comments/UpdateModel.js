@@ -7,7 +7,7 @@ export default function UpdateModal(props) {
   async function updateComment(id, data) {
     let comment = commentRef.current.value;
 
-    let url = `${process.env.REACT_APP_SERVER_URL}/movies/${id}/comments`;
+    let url = `${process.env.REACT_APP_SERVER_URL}/movies/${id}/comment`;
     const response = await fetch(url, {
       method: "PUT",
       headers: {

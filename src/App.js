@@ -1,19 +1,18 @@
 import HomeFun from "./comments/Home"
-// import FavListFun from "./comments/FavList";
+import FavListFun from "./comments/FavList";
 import NavFun from "./comments/Navbar"
 import FooterFun from "./comments/Footer"
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
   <>
   <NavFun/>
-  <HomeFun/>
-  {/* <Routes>
-    <Route path="/" element={}/>
+  <Routes>
+    <Route path="/" element={<HomeFun/>}/>
 
     <Route path="/favourite" element={<FavListFun/>}/>
-  </Routes> */}
+  </Routes>
   <FooterFun/>
   </>
   );
