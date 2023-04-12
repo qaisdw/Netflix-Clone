@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react';
 import MovieListFun from "./MovieList";
-import FavListFun from "./FavList"
 
 export default function HomeFun(){
     const [movies, setMovies] = useState([]);
@@ -34,7 +33,6 @@ export default function HomeFun(){
     return (
         <>
         <MovieListFun moviesData={movies}  commentHandler={commentHandler}/>
-        <FavListFun commentHandler={commentHandler}/>
         </>
         )
 }

@@ -7,6 +7,7 @@ import UpdateModel from "./UpdateModel"
 
 export default function FavListFun(props) {
     const [favMovie, setfavMovie] = useState([]);
+
     async function handleEventFav() {
         let url = `${process.env.REACT_APP_SERVER_URL}/getMovies`;
         const response = await fetch(url, {
@@ -48,15 +49,13 @@ export default function FavListFun(props) {
                         <Card.Body>
                             <Card.Title>{data.movieName}</Card.Title>
                             <Card.Title>{data.overView}</Card.Title>
+                            <Card.Title>{data.comment}</Card.Title>
                             <Button variant="primary" onClick={()=>deleteEvent(data.id)} >Delete</Button>
                             <Button variant="primary" onClick={handleShow} >UpdateInfo</Button>
                         </Card.Body>
                 </Card>
-                <UpdateModel show={show} handleClose={handleClose} movie={data} commentUpdate={props.commentHandler}/>
+                <UpdateModel show={show} handleClose={handleClose} movie={data}/>
                 </>
-                    
-                    
-
                 )
             }))
         }
