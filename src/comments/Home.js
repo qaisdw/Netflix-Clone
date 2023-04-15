@@ -17,13 +17,22 @@ export default function HomeFun(){
       }
   }
 
+  function commentHandler(newMovie,id){
+    movies.map(m=>{
+        if(m.id===id){
+            movies=newMovie.comment;
+            return movies
+        }
+    })
+  }
+
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {gitMovieData();}, []);
       
 
     return (
         <>
-        <MovieListFun moviesData={movies}/>
+        <MovieListFun moviesData={movies}  commentHandler={commentHandler}/>
         </>
         )
 }

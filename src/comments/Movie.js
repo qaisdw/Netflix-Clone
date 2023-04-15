@@ -18,7 +18,7 @@ export default function MovieFun(props){
                 <Button variant="primary" onClick={handleShow}>More Info</Button>
             </Card.Body>
         </Card>
-        <ModalMovieFun show={show} handleClose={handleClose} data={props.movie}/>
+        <ModalMovieFun show={show} handleClose={handleClose} movie={props.movie} commentHandler={props.commentHandler}/>
         </>
         
     )
