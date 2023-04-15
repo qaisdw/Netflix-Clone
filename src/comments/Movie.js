@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useState} from 'react';
 
-import ModalMovieFun from "./ModalMovie"
+import ModalMovieFun from "./FavMovie"
 
 export default function MovieFun(props){
     const [show, setShow] = useState(false);
